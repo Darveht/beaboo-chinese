@@ -1622,7 +1622,6 @@ setInterval(checkScheduledChapters, 60000);
           <div class="w-20 h-20 rounded-full bg-gradient-to-r from-purple-400 to-pink-400"></div>
         </div>
         <span class="text-lg font-semibold">彩虹</span>
-        <p class="text-sm text-gray-500 mt-2">Efecto colorido</p>
         <p class="text-sm text-gray-500 mt-2">色彩效果</p>
         <div class="mt-3 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-bold flex items-center justify-center">
           <span class="mr-1">🪙</span> 25
@@ -1722,11 +1721,10 @@ setInterval(checkScheduledChapters, 60000);
     <div class="mt-6 p-4 bg-green-50 rounded-xl text-center">
       <h3 class="font-bold text-green-800 mb-2">💡 如何获得更多硬币？</h3>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 text-sm text-green-600">
-        <div>📖 Leer capítulos: +8 monedas</div>
-        <div>👥 Seguir usuarios: +5 monedas</div>
-        <div>👀 Ver perfiles/historias: +2 monedas</div>
-        <div>📝 Publicar en comunidad: +10 monedas</div>
-        <div>❤️ Dar like a notas: +5 monedas</div>
+        <div>📖 阅读章节：+8 个硬币</div>
+        <div>👥 关注用户：+5 个硬币</div>
+        <div>👀 查看个人资料/故事：+2 个硬币</div>
+        <div>📝 在社区发布：+10 个硬币</div>
       </div>
     </div>
   </div>
@@ -1736,7 +1734,7 @@ setInterval(checkScheduledChapters, 60000);
 <div id="new-message-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center" style="z-index: 10000;">
   <div class="bg-white rounded-xl p-6 w-96 max-w-[90vw] max-h-[90vh] overflow-y-auto">
     <div class="flex justify-between items-center mb-4">
-      <h3 class="text-xl font-bold">Nuevo Mensaje</h3>
+      <h3 class="text-xl font-bold">新消息</h3>
       <button onclick="closeNewMessage()" class="text-gray-500 hover:text-gray-700">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -1746,7 +1744,7 @@ setInterval(checkScheduledChapters, 60000);
     
     <div class="space-y-4">
       <div>
-        <label class="block text-sm font-medium mb-2">Buscar autor:</label>
+        <label class="block text-sm font-medium mb-2">搜索作者:</label>
         <input type="text" id="author-search" placeholder="Nombre del autor..." 
                class="w-full p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FE2C55]"
                oninput="searchAuthors(this.value)">
@@ -1757,7 +1755,7 @@ setInterval(checkScheduledChapters, 60000);
       </div>
       
       <div>
-        <label class="block text-sm font-medium mb-2">Mensaje:</label>
+        <label class="block text-sm font-medium mb-2">消息:</label>
         <textarea id="new-message-text" placeholder="Escribe tu mensaje..." 
                   class="w-full p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FE2C55] resize-none" 
                   rows="3"></textarea>
@@ -1803,7 +1801,7 @@ setInterval(checkScheduledChapters, 60000);
   
   <div id="auth-form" class="w-full h-screen flex flex-col justify-center p-6">
     <!-- Título centrado -->
-    <h1 id="auth-title" class="text-4xl font-bold text-center mb-8">BeaBoo</h1>
+    <h1 id="auth-title" class="text-4xl font-bold text-center mb-8">你好，世界</h1>
     <!-- Formulario ocupa todo el ancho disponible -->
     <form id="authForm" class="w-full space-y-6 max-w-lg mx-auto">
       <input
@@ -1825,7 +1823,7 @@ setInterval(checkScheduledChapters, 60000);
         type="submit"
         class="w-full bg-[#FE2C55] text-white p-4 font-bold rounded-full transform hover:scale-105 transition"
       >
-        Iniciar Sesión
+        Sign In
       </button>
     </form>
     <!-- Links y toggle debajo del formulario -->
@@ -1835,13 +1833,13 @@ setInterval(checkScheduledChapters, 60000);
         onclick="resetPassword()"
         class="block text-sm text-gray-600 hover:text-[#FE2C55] transition"
       >
-        ¿Olvidaste tu contraseña?
+        忘记密码了吗？
       </a>
       <button
         id="toggleAuth"
         class="block text-sm font-medium text-[#FE2C55] hover:text-[#25F4EE] transition"
       >
-        ¿No tienes cuenta? Regístrate
+        Don't have an account? Sign up
       </button>
       <div id="authError" class="mt-4 text-red-500 hidden"></div>
     </div>
@@ -1852,7 +1850,7 @@ setInterval(checkScheduledChapters, 60000);
 <div id="main-app" class="h-screen flex flex-col bg-white font-sans text-black">
   <!-- BARRA SUPERIOR CON NOMBRE + ICONOS -->
   <div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 sticky top-0 z-50 bg-white">
-    <h1 id="app-name" class="text-2xl font-bold text-[#161823]">BeaBoo</h1>
+    <h1 id="app-name" class="text-2xl font-bold text-[#161823]">比阿布</h1>
     <div class="flex items-center space-x-4">
       <button onclick="openSearch()" aria-label="Buscar" class="relative w-6 h-6 text-[#161823] hover:text-[#FE2C55] transition">
         <svg class="w-full h-full" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -1891,7 +1889,7 @@ setInterval(checkScheduledChapters, 60000);
 
   <div class="flex-1 overflow-y-auto pb-20 p-6" id="scrollable-content">
     <div class="text-center mb-6">
-      <p id="tagline" class="mt-2 text-lg text-gray-700">Tu portal de historias inolvidables</p>
+      <p id="tagline" class="mt-2 text-lg text-gray-700">你难忘的故事门户</p>
     </div>
 
     
@@ -2054,7 +2052,7 @@ firebase.auth().onAuthStateChanged(user => {
         <svg class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 20 20">
           <path d="M10 2L2 8v10a1 1 0 001 1h5v-5h4v5h5a1 1 0 001-1V8l-8-6z" />
         </svg>
-        <span class="text-xs">Inicio</span>
+        <span class="text-xs">家</span>
       </button>
       <button onclick="openCommunity()" class="flex flex-col items-center text-[#161823] hover:text-[#FE2C55] transition">
         <svg class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 20 20">
@@ -2067,13 +2065,13 @@ firebase.auth().onAuthStateChanged(user => {
         <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
         </svg>
-        <span class="text-xs">Crear</span>
+        <span class="text-xs">创建</span>
       </button>
       <button onclick="openProfile()" class="flex flex-col items-center text-[#161823] hover:text-[#FE2C55] transition">
         <svg class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 20 20">
           <path fill-rule="evenodd" d="M10 10a4 4 0 100-8 4 4 0 000 8zM2 18a8 8 0 1116 0H2z" clip-rule="evenodd" />
         </svg>
-        <span class="text-xs">Perfil</span>
+        <span class="text-xs">个人资料</span>
       </button>
     </div>
   </div>
@@ -2109,7 +2107,7 @@ firebase.auth().onAuthStateChanged(user => {
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <polyline points="15 18 9 12 15 6" />
       </svg>
-      <span>Volver</span>
+      <span>返回</span>
     </button>
 
     <div class="flex flex-col h-[calc(100vh-120px)]">
@@ -2117,8 +2115,8 @@ firebase.auth().onAuthStateChanged(user => {
       <div class="bg-white p-4 rounded-t-2xl shadow-sm mb-4 flex items-center">
         <img src="https://cdn-icons-png.flaticon.com/512/4712/4712009.png" alt="BIbeeAI" class="w-10 h-10 mr-3">
         <div>
-          <h2 class="font-bold text-lg">BIbeeAI Assistant</h2>
-          <p class="text-sm text-gray-500">Pregúntame lo que quieras</p>
+          <h2 class="font-bold text-lg">BIbeeAI 助手</h2>
+          <p class="text-sm text-gray-500">Ask me anything you want</p>
         </div>
       </div>
 
@@ -2130,11 +2128,11 @@ firebase.auth().onAuthStateChanged(user => {
             <img src="https://cdn-icons-png.flaticon.com/512/4712/4712009.png" alt="AI" class="w-8 h-8">
           </div>
           <div class="bg-white p-4 rounded-2xl shadow-sm max-w-[80%] animate-message">
-            <p>¡Hola! Soy BIbeeAI, tu asistente personal. Puedo ayudarte con:</p>
+            <p>你好！我是BIbeeAI，你的个人助理。我可以帮助你：</p>
             <ul class="mt-2 list-disc list-inside">
-              <li>Búsqueda de información en Wikipedia</li>
-              <li>Responder preguntas generales</li>
-              <li>Ayudarte con tus dudas</li>
+              <li>在维基百科上搜索信息</li>
+              <li>回答一般问题</li>
+              <li>帮助你解决疑问</li>
             </ul>
           </div>
         </div>
@@ -2207,14 +2205,15 @@ firebase.auth().onAuthStateChanged(user => {
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <polyline points="15 18 9 12 15 6" />
       </svg>
-      <span>Volver</span>
+      <span>Back</span>
     </button>
 
     <!-- Header -->
     <div class="text-center mb-8">
-      <h1 class="text-3xl font-bold text-[#FE2C55] mb-2">Centro de Creadores</h1>
-      <p class="text-gray-600">Crea contenido increíble y compártelo con la comunidad</p>
+      <h1 class="text-3xl font-bold text-[#FE2C55] mb-2">创作者中心</h1>
+      <p class="text-gray-600">创作精彩内容，与社区分享</p>
     </div>
+
 
     <!-- Grid de opciones de creación -->
     <div class="grid grid-cols-1 gap-6 max-w-2xl mx-auto">
@@ -2229,10 +2228,10 @@ firebase.auth().onAuthStateChanged(user => {
               </svg>
             </div>
             <div class="flex-1">
-              <h3 class="text-xl font-bold mb-2 text-black">Crear Historia</h3>
-              <p class="text-gray-600 mb-3">Escribe y publica tus historias originales</p>
+              <h3 class="text-xl font-bold mb-2 text-black">创建故事</h3>
+              <p class="text-gray-600 mb-3">撰写并发布您的原创故事</p>
               <div class="flex items-center text-[#FE2C55] group-hover:text-[#ef2950] transition-colors">
-                <span class="font-medium mr-2">Comenzar</span>
+                <span class="font-medium mr-2">Start</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
